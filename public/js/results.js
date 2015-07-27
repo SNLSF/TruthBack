@@ -21,6 +21,11 @@ $(document).on('click', 'img', function(e) {
     data: {"url": selectedSurveyUrl}
   }).success(function(response) {
     var response = JSON.parse(response);
+
+    if (response.value == undefined) {
+      $('div.survey-block').append( "<p>No one has taken your survey yet!</p>" );
+    };
+
     for (var value in response) {
       $('div.survey-block').append( "<p>"+ value +"</p>" );
       $('div.survey-block').append( "<p>"+ response[value] +"</p>" );

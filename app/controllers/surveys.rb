@@ -58,6 +58,7 @@ post '/surveyresults' do
   @result = Hash.new(0)
   @traits.each { |trait| @result[trait] += 1 }
   @result.to_json
+  
 end
 
 #Destroy the survey
