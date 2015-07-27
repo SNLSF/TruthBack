@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('.survey-block').hide();
-
 });
 
 $(document).on('click', 'img', function(e) {

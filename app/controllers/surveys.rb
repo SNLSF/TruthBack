@@ -16,7 +16,9 @@ end
 
 #Show all users' surveys
 get '/surveys' do
-  @photos = Photo.all
+  user_id = session[:user_id]
+  @current_user = User.find(user_id)
+  @photos = Photo.where("user_id != #{@current_user.id}")
   @traits = Trait.all
   erb :'surveys/index'
 end
