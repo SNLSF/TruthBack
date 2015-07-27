@@ -9,7 +9,6 @@ get '/auth/:provider/callback' do
 
   if @user == nil
     @user = User.create(name: env["omniauth.auth"]["info"]["name"], email: env["omniauth.auth"]["info"]["email"])
-    #Removed image as an attribute
   end
   session[:user_id] = @user.id
   redirect "users/#{@user.id}"
