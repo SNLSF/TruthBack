@@ -1,5 +1,3 @@
-
-
 //In layout.erb we manually trigger the fb:loaded event when the fb SDK is created
 $(document).on('fb:loaded', function() {
   //getLoginStatus won't run until everything is initialized
