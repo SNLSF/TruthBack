@@ -1,0 +1,34 @@
+<script src="/js/choose-survey.js"/></script>
+
+<div class="outer_wrap">
+    <div class="outer_wrap_text_box">
+        <a href='/surveys/new'>Create a Survey</a><br>
+        <a href='/surveys/results'>Your Results</a><br>
+        <a href='/logout'>Logout</a><br>
+    </div>
+    <div class="inner_wrap">
+        <h2>Choose a Survey</h2>
+        <% @photos.each do |photo| %>
+          <img src="<%= photo.url %>">
+        <% end %>
+
+        <div class="survey-block">
+            <h2>Which word describes the person in the picture?</h2>
+            <form action='/surveys/complete' method='POST'>
+              <input type="hidden" name="photo_url" value="" />
+              <% @traits.each do |trait| %>
+                <label class="trait-radio-button">
+                  <input type="radio" name="trait" value="<%= trait.word %>">
+                  <%= trait.word %>
+                </label>
+
+              <% end %>
+              <h3>Submit your survey!</h3>
+              <input type= "submit" class="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+

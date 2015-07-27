@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+  <link href='https://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+
+  <title></title>
+</head>
+<body>
+   <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1432894690337976',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+
+        $(document).trigger('fb:loaded');
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+  <h1>TruthBack</h1>
+  <%= yield %>
+</body>
+</html>

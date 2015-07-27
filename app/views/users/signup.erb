@@ -1,0 +1,23 @@
+<div class="outer_wrap">
+    <div class="outer_wrap_text_box">
+        <!-- Add steps on how to use the app -->
+    </div>
+    <div class="inner_wrap">
+        <h3>Sign up</h3>
+
+        <form class="sign_up_form" method="post" action="/users">
+
+        <input type="text" name="user[name]" placeholder="e.g. Joe" value="<%= @email %>">
+        <label class="label" for="name">Name</label><br>
+
+        <input type="email" name="user[email]" placeholder="me@example.com" value="<%= @email %>">
+        <label class="label" for="email">Email</label><br>
+
+        <input type="password" name="user[password]" placeholder="6 or more characters">
+        <label class="label" for="password">Password</label><br>
+        <br>
+        <div class="submit"><input type="submit" value="Sign Up"></div>
+        </form>
+    </div>
+
+</div>

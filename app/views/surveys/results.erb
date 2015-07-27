@@ -1,0 +1,22 @@
+<script src="/js/results.js"/></script>
+
+<div class="outer_wrap">
+    <div class="outer_wrap_text_box">
+        <a href='/surveys/new'>Create a Survey</a><br>
+        <a href='/surveys'>Take a Survey</a><br>
+        <a href='/logout'>Logout</a><br>
+    </div>
+    <div class="inner_wrap">
+        <h2>Pick a photo to see results!</h2>
+        <% @photos.each do |photo| %>
+          <img src="<%= photo.url %>">
+        <% end %>
+
+        <!-- Answer.where(photo_id: ) -->
+        <div class="survey-block">
+            <h2>Here is what others thought of your photo:</h2>
+        </div>
+
+    </div>
+</div>
+

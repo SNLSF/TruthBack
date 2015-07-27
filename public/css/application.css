@@ -1,0 +1,145 @@
+/*
+font-family: 'Oleo Script', cursive;
+font-family: 'Fugaz One', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+dark pink #F72475
+light pink #FFA7D1
+light blue #365DB0
+lightest blue #4374DB
+dark blue #03347D
+off white #F0F3F9
+*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #365DB0
+}
+
+/* unvisited link */
+a:link {
+  color: #4374DB;
+  /*text-decoration: none;*/
+  font-weight: bolder;
+}
+
+/* visited link */
+a:visited {
+  color: #4374DB;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FFA7D1;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #4374DB;
+  text-decoration: none;
+}
+
+.outer_wrap {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #03347D;
+  color: #4374DB;
+  margin: 0% 15% 5% 15%;
+  padding: 2%;
+}
+
+.outer_wrap_text_box {
+  display: inline-block;
+  padding: 0% 2% 2% 2%;
+  width: 15%;
+  vertical-align: top;
+  height: 500px;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.login {
+  text-align: right;
+}
+
+.facebook {
+  font-family: 'Oleo Script', cursive;
+  font-size: 2em;
+}
+
+.inner_wrap {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F0F3F9;
+  display: inline-block;
+  width: 75%;
+  vertical-align: top;
+  padding: 2%;
+  height: 1000px;
+  line-height: 1.5em;
+  overflow: scroll;
+}
+
+
+h1 {
+  font-family: 'Oleo Script', cursive;
+   -webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: white;
+   color: #F72475;
+   font-size: 4em;
+   margin: 5% 0% 0% 7%;
+   vertical-align: bottom;
+   text-align: right;
+   margin-right: 17%;
+}
+
+h2 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 2em;
+  color: #F72475;
+}
+
+h3 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 1.5em;
+  color: #F72475
+}
+
+.profile_pic {
+  height: 200px;
+  display: block;
+}
+
+.photos_list {
+  display: inline-block;
+}
+
+.photos .photo {
+  border: 5px solid transparent;
+}
+
+.photos .photo:hover {
+  border: 5px solid grey;
+  cursor: pointer;
+}
+
+.photos .photo.active {
+  border: 5px solid #4374DB;
+}
+
+img {
+  border: 5px solid transparent;
+}
+
+img:hover {
+  border: 5px solid grey;
+  cursor: pointer;
+}
+
+img.active {
+  border: 5px solid #4374DB;
+  margin-left: 30%;
+}
+
+.trait-radio-button{
+  display: block;
+}

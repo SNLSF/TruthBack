@@ -1,0 +1,28 @@
+<script src="/js/survey_new.js"/></script>
+
+<div class="outer_wrap">
+    <div class="outer_wrap_text_box">
+      <a href='/surveys'>Take a Survey</a><br>
+      <a href='/surveys/results'>Your Results</a><br>
+      <a href='/logout'>Logout</a><br>
+    </div>
+    <div class="inner_wrap">
+        <h2>Choose a Photo</h2>
+
+        <div class="photos"></div>
+
+        <h2>Which word describes the look you're going for?</h2>
+        <form action='/surveys' method='POST'>
+          <input type="hidden" name="photo_url" value="" />
+          <% @traits.each do |trait| %>
+            <label class="trait-radio-button">
+              <input type="radio" name="trait" value="<%= trait.word %>">
+              <%= trait.word %>
+            </label>
+
+          <% end %>
+          <h3>Clicking submit will allow other users to take your survey!</h3>
+          <input type= "submit" class="submit" value="Create Survey">
+        </form>
+    </div>
+</div>
